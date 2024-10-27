@@ -47,6 +47,7 @@
   },
   "clock": {
     "format": "<span color='#a6e3a1'>󰥔</span> {:%H:%M - %a, %d %b}",
+    "tooltip": false,
   },
   "temperature": {
     "format": "<span color='#b4befe'></span> {temperatureC}°C",
