@@ -14,3 +14,6 @@ cp -r ./nvim/ ~/.config/
 # Install and setup rofi
 sudo pacman -S rofi-wayland
 cp -r ./rofi/ ~/.config/
+
+# Setup Bash
+cp ./.bashrc ~/
