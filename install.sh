@@ -17,3 +17,7 @@ cp -r ./rofi/ ~/.config/
 
 # Setup Bash
 cp ./.bashrc ~/
+
+# Install and setup starship
+sudo pacman -S starship
+cp ./starship.toml ~/.config/
