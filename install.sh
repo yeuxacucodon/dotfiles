@@ -72,6 +72,14 @@ install_waybar() {
   run_cmd "cp -r ./waybar/ $CONFIG_DIR/"
 }
 
+# Install and configure fastfetch
+install_fastfetch() {
+  echo "Installing and setting up fastfetch"
+  run_cmd "sudo pacman -S fastfetch --needed"
+  ensure_config_dir
+  run_cmd "cp -r ./fastfetch/ $CONFIG_DIR/"
+}
+
 # Main bootstrap function
 bootstrap() {
   update_system
@@ -81,6 +89,7 @@ bootstrap() {
   setup_bash
   install_starship
   install_waybar
+  install_fastfetch
 }
 
 # Help function
