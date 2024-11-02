@@ -13,7 +13,25 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfall",
+      colorscheme = "deepernight",
     },
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        denols = {
+          mason = false,
+        },
+      },
+    },
+  },
+
+  {
+    "vyfor/cord.nvim",
+    build = "./build ",
+    event = "VeryLazy",
+    opts = {},
   },
 }
