@@ -80,6 +80,13 @@ install_fastfetch() {
   run_cmd "cp -r ./fastfetch/ $CONFIG_DIR/"
 }
 
+# Install backgrounds
+install_backgrounds() {
+  echo "Installing backgrounds..."
+  [ -d "$HOME/Pictures/" ] || run_cmd "mkdir -p $HOME/Pictures/"
+  run_cmd "cp -r ./backgrounds/ ~/Pictures/"
+}
+
 # Main bootstrap function
 bootstrap() {
   update_system
@@ -90,6 +97,7 @@ bootstrap() {
   install_starship
   install_waybar
   install_fastfetch
+  install_backgrounds
 }
 
 # Help function
