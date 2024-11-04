@@ -91,6 +91,7 @@ install_fastfetch() {
 install_yazi() {
   echo "Installing yazi..."
   run_cmd "sudo pacman -S yazi jq ripgrep fd chafa wl-clipboard zoxide fzf ueberzugpp --needed"
+  run_cmd "ya pack -i"
   ensure_config_dir
   run_cmd "cp -r ./yazi/ $CONFIG_DIR"
 }
