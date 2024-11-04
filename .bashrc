@@ -16,7 +16,6 @@ eval "$(starship init bash)"
 # Start ssh-agent automatically
 if ! pgrep -u "$USER" ssh-agent >/dev/null; then
   ssh-agent >"$XDG_RUNTIME_DIR/ssh-agent.env"
-  ssh-add "$HOME/.ssh/id_ed25519"
 fi
 if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
   source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
