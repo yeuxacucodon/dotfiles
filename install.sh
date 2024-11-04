@@ -2,7 +2,7 @@
 
 set -e
 
-CONFIG_DIR="$HOME/.config"
+CONFIG_DIR="$HOME/.config/"
 DRY_RUN=false
 
 # Function to run a command with optional dry run
@@ -31,7 +31,7 @@ install_hyprland() {
   echo "Installing and setting up Hyprland..."
   run_cmd "sudo pacman -S hyprland hyprpaper hyprlock --needed"
   ensure_config_dir
-  run_cmd "cp -r ./hypr/ $CONFIG_DIR/"
+  run_cmd "cp -r ./hypr/ $CONFIG_DIR"
 }
 
 # Install and configure Neovim
@@ -39,7 +39,7 @@ install_neovim() {
   echo "Installing and setting up Neovim..."
   run_cmd "sudo pacman -S neovim --needed"
   ensure_config_dir
-  run_cmd "cp -r ./nvim/ $CONFIG_DIR/"
+  run_cmd "cp -r ./nvim/ $CONFIG_DIR"
 }
 
 # Install and configure Rofi
@@ -47,7 +47,14 @@ install_rofi() {
   echo "Installing and setting up Rofi..."
   run_cmd "sudo pacman -S rofi-wayland --needed"
   ensure_config_dir
-  run_cmd "cp -r ./rofi/ $CONFIG_DIR/"
+  run_cmd "cp -r ./rofi/ $CONFIG_DIR"
+}
+
+install_alacritty() {
+  echo "Installing and setting up Alacritty"
+  run_cmd "sudo pacman -S alacritty ttf-jetbrains-mono-nerd"
+  ensure_config_dir
+  run_cmd "cp -r ./alacritty/ $CONFIG_DIR"
 }
 
 # Configure Bash
@@ -61,7 +68,7 @@ install_starship() {
   echo "Installing and setting up Starship prompt..."
   run_cmd "sudo pacman -S starship --needed"
   ensure_config_dir
-  run_cmd "cp ./starship.toml $CONFIG_DIR/"
+  run_cmd "cp ./starship.toml $CONFIG_DIR"
 }
 
 # Install and configure Waybar
@@ -69,7 +76,7 @@ install_waybar() {
   echo "Installing and setting up Waybar..."
   run_cmd "sudo pacman -S waybar --needed"
   ensure_config_dir
-  run_cmd "cp -r ./waybar/ $CONFIG_DIR/"
+  run_cmd "cp -r ./waybar/ $CONFIG_DIR"
 }
 
 # Install and configure fastfetch
@@ -77,7 +84,7 @@ install_fastfetch() {
   echo "Installing and setting up fastfetch"
   run_cmd "sudo pacman -S fastfetch --needed"
   ensure_config_dir
-  run_cmd "cp -r ./fastfetch/ $CONFIG_DIR/"
+  run_cmd "cp -r ./fastfetch/ $CONFIG_DIR"
 }
 
 # Install backgrounds
@@ -95,6 +102,7 @@ bootstrap() {
   install_rofi
   setup_bash
   install_starship
+  install_alacritty
   install_waybar
   install_fastfetch
   install_backgrounds
