@@ -87,6 +87,14 @@ install_fastfetch() {
   run_cmd "cp -r ./fastfetch/ $CONFIG_DIR"
 }
 
+# Install and setting up yazi
+install_yazi() {
+  echo "Installing yazi..."
+  run_cmd "sudo pacman -S yazi jq ripgrep fd chafa wl-clipboard zoxide fzf ueberzugpp --needed"
+  ensure_config_dir
+  run_cmd "cp -r ./yazi/ $CONFIG_DIR"
+}
+
 # Install backgrounds
 install_backgrounds() {
   echo "Installing backgrounds..."
@@ -94,8 +102,8 @@ install_backgrounds() {
   run_cmd "cp -r ./backgrounds/ ~/Pictures/"
 }
 
-# Main bootstrap function
-bootstrap() {
+# Main install function
+install() {
   update_system
   install_hyprland
   install_neovim
@@ -104,6 +112,7 @@ bootstrap() {
   install_starship
   install_alacritty
   install_waybar
+  install_yazi
   install_fastfetch
   install_backgrounds
 }
@@ -113,7 +122,7 @@ show_help() {
   echo "Usage: $0 [OPTION]"
   echo ""
   echo "Options:"
-  echo "  --bootstrap       Run the full bootstrap process to install and configure all applications"
+  echo "  --install         Run the full install process to install and configure all applications"
   echo "  --dry-run         Show the commands without executing them (useful for testing)"
   echo "  --help            Display this help message"
   echo ""
@@ -128,7 +137,7 @@ fi
 # Parse arguments
 for arg in "$@"; do
   case "$arg" in
-  "--bootstrap") bootstrap ;;
+  "--install") install ;;
   "--dry-run") DRY_RUN=true ;;
   "--help")
     show_help
