@@ -110,6 +110,14 @@ install_yazi() {
   run_cmd "cp -r ./yazi/ $CONFIG_DIR"
 }
 
+# Install and setting up dunst
+install_dunst() {
+  print_heading "Installing and setting up dunst..."
+  run_cmd "sudo pacman -S dunst --needed"
+  ensure_config_dir
+  run_cmd "cp -r ./dunst/ $CONFIG_DIR"
+}
+
 # Install backgrounds
 install_backgrounds() {
   print_heading "Installing backgrounds..."
@@ -125,6 +133,7 @@ install() {
   install_rofi
   setup_bash
   install_starship
+  install_dunst
   install_alacritty
   install_waybar
   install_yazi
