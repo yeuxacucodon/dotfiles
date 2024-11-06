@@ -118,6 +118,22 @@ install_dunst() {
   run_cmd "cp -r ./dunst/ $CONFIG_DIR"
 }
 
+# Install and setting up Nix
+install_nix() {
+  print_heading "Installing and setting up Nix..."
+  run_cmd "sudo pacman -S nix --needed"
+  ensure_config_dir
+  run_cmd "cp -r ./nix/ $CONFIG_DIR"
+}
+
+# Install and setting up bottom
+install_bottom() {
+  print_heading "Installing and setting up bottom"
+  run_cmd "sudo pacman -S bottom --needed"
+  ensure_config_dir
+  run_cmd "cp -r ./bottom/ $CONFIG_DIR"
+}
+
 # Install backgrounds
 install_backgrounds() {
   print_heading "Installing backgrounds..."
