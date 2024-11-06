@@ -151,6 +151,8 @@ install() {
   install_starship
   install_dunst
   install_alacritty
+  install_bottom
+  install_nix
   install_waybar
   install_yazi
   install_fastfetch
