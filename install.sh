@@ -42,7 +42,7 @@ update_system() {
 # Install and configure Hyprland
 install_hyprland() {
   print_heading "Installing and setting up Hyprland..."
-  run_cmd "sudo pacman -S hyprland hyprpaper hyprlock --needed"
+  run_cmd "sudo pacman -S hyprland hyprpaper hyprlock polkit polkit-kde-agent gnome-keyring --needed"
   ensure_config_dir
   run_cmd "cp -r ./hypr/ $CONFIG_DIR"
 }
