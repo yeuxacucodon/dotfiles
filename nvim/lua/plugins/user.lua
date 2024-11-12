@@ -13,7 +13,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "deepernight",
+      colorscheme = "nightfall",
     },
   },
 
@@ -24,6 +24,8 @@ return {
         denols = {
           mason = false,
         },
+        html = {},
+        cssls = {},
       },
     },
   },
@@ -44,6 +46,21 @@ return {
           package_installed = " ",
           package_uninstalled = " ",
         },
+      },
+    },
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = { ensure_installed = { "nix" } },
+  },
+
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        nix = { "nixfmt" },
       },
     },
   },
