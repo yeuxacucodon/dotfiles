@@ -2,9 +2,10 @@
 
 DIR="$HOME/Pictures/backgrounds/"
 
-hyprpaper &
-
-sleep 1
+if [ ! $(pgrep -x hyprpaper) ]; then
+  hyprpaper &
+  sleep 1
+fi
 
 if [ -d "$DIR" ]; then
   random_background=$(find "$DIR" -name "bg*" | shuf -n1)
