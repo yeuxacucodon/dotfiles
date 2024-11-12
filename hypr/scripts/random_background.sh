@@ -8,6 +8,7 @@ if [ ! $(pgrep -x hyprpaper) ]; then
 fi
 
 if [ -d "$DIR" ]; then
+  dunstify "Background changed"
   random_background=$(find "$DIR" -name "bg*" | shuf -n1)
   hyprctl hyprpaper unload all
   hyprctl hyprpaper preload "$random_background"
