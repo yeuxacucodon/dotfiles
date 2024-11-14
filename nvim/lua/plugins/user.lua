@@ -1,19 +1,19 @@
 return {
-  {
-    "2giosangmitom/nightfall.nvim",
-    dir = "~/Workspace/nightfall.nvim/",
-    init = function()
-      vim.g.nightfall_debug = true
-    end,
-    opts = {
-      transparent = false,
-    },
-  },
+  -- {
+  --   "2giosangmitom/nightfall.nvim",
+  --   dir = "~/Workspace/nightfall.nvim/",
+  --   init = function()
+  --     vim.g.nightfall_debug = true
+  --   end,
+  --   opts = {
+  --     transparent = true,
+  --   },
+  -- },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfall",
+      colorscheme = "catppuccin",
     },
   },
 
@@ -57,11 +57,27 @@ return {
 
   {
     "stevearc/conform.nvim",
-    optional = true,
     opts = {
       formatters_by_ft = {
         nix = { "nixfmt" },
       },
+    },
+  },
+
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = function(_, opts)
+      opts.options.component_separators = { left = "", right = "" }
+      opts.options.section_separators = { left = "", right = "" }
+      opts.sections.lualine_z = { "location" }
+      opts.sections.lualine_y = { "progress" }
+    end,
+  },
+
+  {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "helix",
     },
   },
 }
