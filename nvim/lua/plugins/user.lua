@@ -18,6 +18,24 @@ return {
   },
 
   {
+    "catppuccin/nvim",
+    opts = {
+      transparent_background = false,
+    },
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+      }
+    end,
+  },
+
+  {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
@@ -69,8 +87,6 @@ return {
     opts = function(_, opts)
       opts.options.component_separators = { left = "", right = "" }
       opts.options.section_separators = { left = "", right = "" }
-      opts.sections.lualine_z = { "location" }
-      opts.sections.lualine_y = { "progress" }
     end,
   },
 
