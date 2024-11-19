@@ -134,6 +134,14 @@ install_bottom() {
   run_cmd "cp -r ./bottom/ $CONFIG_DIR"
 }
 
+# Install and setting up lazygit
+install_lazygit() {
+  print_heading "Installing and setting up lazygit"
+  run_cmd "sudo pacman -S lazygit --needed"
+  ensure_config_dir
+  run_cmd "cp -r ./lazygit/ $CONFIG_DIR"
+}
+
 # Install backgrounds
 install_backgrounds() {
   print_heading "Installing backgrounds..."
