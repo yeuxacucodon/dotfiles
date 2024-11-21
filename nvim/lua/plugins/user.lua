@@ -1,26 +1,23 @@
 return {
-  -- {
-  --   "2giosangmitom/nightfall.nvim",
-  --   dir = "~/Workspace/nightfall.nvim/",
-  --   init = function()
-  --     vim.g.nightfall_debug = true
-  --   end,
-  --   opts = {
-  --     transparent = true,
-  --   },
-  -- },
-
   {
-    "LazyVim/LazyVim",
+    "2giosangmitom/nightfall.nvim",
+    lazy = false,
+    dir = "~/Workspace/nightfall.nvim/",
+    init = function()
+      vim.g.nightfall_debug = true
+    end,
+    priority = 1000,
     opts = {
-      colorscheme = "catppuccin",
+      integrations = {
+        snacks = { enabled = true },
+      },
     },
   },
 
   {
-    "catppuccin/nvim",
+    "LazyVim/LazyVim",
     opts = {
-      transparent_background = false,
+      colorscheme = "nightfall",
     },
   },
 
@@ -70,7 +67,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = { ensure_installed = { "nix" } },
+    opts = { ensure_installed = { "nix", "just" } },
   },
 
   {
@@ -95,5 +92,19 @@ return {
     opts = {
       preset = "helix",
     },
+  },
+
+  {
+    "folke/noice.nvim",
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
+  },
+
+  {
+    "catppuccin/nvim",
+    enabled = false,
   },
 }
