@@ -1,11 +1,7 @@
 return {
   {
     "2giosangmitom/nightfall.nvim",
-    lazy = false,
     dir = "~/Workspace/nightfall.nvim/",
-    init = function()
-      vim.g.nightfall_debug = true
-    end,
     priority = 1000,
     opts = {
       integrations = {
@@ -95,16 +91,9 @@ return {
   },
 
   {
-    "folke/noice.nvim",
-    opts = {
-      presets = {
-        lsp_doc_border = true,
-      },
-    },
-  },
-
-  {
-    "catppuccin/nvim",
-    enabled = false,
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    opts = {},
   },
 }
