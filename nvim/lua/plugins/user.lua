@@ -3,11 +3,7 @@ return {
     "2giosangmitom/nightfall.nvim",
     dir = "~/Workspace/nightfall.nvim/",
     priority = 1000,
-    opts = {
-      integrations = {
-        snacks = { enabled = true },
-      },
-    },
+    opts = {},
   },
 
   {
@@ -15,17 +11,6 @@ return {
     opts = {
       colorscheme = "nightfall",
     },
-  },
-
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      local cmp = require("cmp")
-      opts.window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
-      }
-    end,
   },
 
   {
@@ -39,13 +24,6 @@ return {
         cssls = {},
       },
     },
-  },
-
-  {
-    "vyfor/cord.nvim",
-    build = "./build ",
-    event = "VeryLazy",
-    opts = {},
   },
 
   {
@@ -95,5 +73,12 @@ return {
     version = "*",
     event = "VeryLazy",
     opts = {},
+  },
+
+  {
+    "stevearc/overseer.nvim",
+    opts = {
+      templates = { "builtin", "user.cpp_build" },
+    },
   },
 }
