@@ -9,7 +9,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfall",
+      colorscheme = "catppuccin",
     },
   },
 
@@ -78,7 +78,7 @@ return {
   {
     "stevearc/overseer.nvim",
     opts = {
-      templates = { "builtin", "user.cpp_build" },
+      templates = { "builtin", "user.cpp_build", "user.c_build" },
     },
   },
 }
