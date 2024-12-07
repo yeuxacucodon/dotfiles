@@ -25,3 +25,6 @@ eval "$(fzf --bash)"
 
 # Add nvim path
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+
+# Set default editor
+export EDITOR="nvim"
