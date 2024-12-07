@@ -1,0 +1,7 @@
+idle = false
+
+[font]
+normal = ["JetBrainsMono NF"]
+size = 14
+hinting = "full"
+edging = "antialias"
