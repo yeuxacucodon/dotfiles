@@ -5,3 +5,4 @@ assets
 \.gitmodules
 ^/README.*
 ^/LICENSE.*
+.config/yazi/flavors/
