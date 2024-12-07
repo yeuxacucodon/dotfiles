@@ -1,0 +1,7 @@
+install.sh
+assets
+\.git
+\.gitignore
+\.gitmodules
+^/README.*
+^/LICENSE.*

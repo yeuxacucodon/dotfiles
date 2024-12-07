@@ -22,3 +22,6 @@ eval "$(zoxide init bash)"
 
 # Use fzf
 eval "$(fzf --bash)"
+
+# Add nvim path
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"

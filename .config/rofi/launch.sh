@@ -3,7 +3,7 @@
 DIR="$HOME/.config/rofi"
 
 show_launcher() {
-  rofi -show drun -theme "$DIR/launcher.rasi"
+	rofi -show drun -theme "$DIR/launcher.rasi"
 }
 
 shutdown="⏻ Shutdown"
@@ -15,85 +15,85 @@ yes="󰗠 Yes"
 no="󰅙 No"
 
 show_powermenu() {
-  options=(
-    "$lock"
-    "$suspend"
-    "$logout"
-    "$reboot"
-    "$shutdown"
-  )
+	options=(
+		"$lock"
+		"$suspend"
+		"$logout"
+		"$reboot"
+		"$shutdown"
+	)
 
-  uptime="$(uptime -p | cut -b 4-)"
-  host=$(cat /etc/hostname)
-  choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$DIR/powermenu.rasi")
-  echo "$choice"
+	uptime="$(uptime -p | cut -b 4-)"
+	host=$(cat /etc/hostname)
+	choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -p "$host" -mesg "Uptime: $uptime" -theme "$DIR/powermenu.rasi")
+	echo "$choice"
 }
 
 confirm_exit() {
-  selected=$(echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme "$DIR/confirm.rasi")
-  echo "$selected"
+	selected=$(echo -e "$yes\n$no" | rofi -dmenu -p "Confirmation" -mesg "Are you sure?" -theme "$DIR/confirm.rasi")
+	echo "$selected"
 }
 
 run_cmd() {
-  action="$1"
-  selected=$(confirm_exit "$DIR/confirm.rasi")
-  if [[ "$selected" == "$yes" ]]; then
-    case "$action" in
-    "--shutdown")
-      systemctl poweroff
-      ;;
-    "--reboot")
-      systemctl reboot
-      ;;
-    "--suspend")
-      systemctl suspend
-      ;;
-    "--logout")
-      hyprctl dispatch exit
-      ;;
-    "--lock")
-      hyprlock
-      ;;
-    *)
-      echo "Invalid action: $action"
-      exit 1
-      ;;
-    esac
-  else
-    exit 0
-  fi
+	action="$1"
+	selected=$(confirm_exit "$DIR/confirm.rasi")
+	if [[ "$selected" == "$yes" ]]; then
+		case "$action" in
+		"--shutdown")
+			systemctl poweroff
+			;;
+		"--reboot")
+			systemctl reboot
+			;;
+		"--suspend")
+			systemctl suspend
+			;;
+		"--logout")
+			hyprctl dispatch exit
+			;;
+		"--lock")
+			hyprlock
+			;;
+		*)
+			echo "Invalid action: $action"
+			exit 1
+			;;
+		esac
+	else
+		exit 0
+	fi
 }
 
 case "$1" in
 "launcher")
-  show_launcher
-  ;;
+	show_launcher
+	;;
 "powermenu")
-  choice=$(show_powermenu "$DIR/powermenu.rasi")
-  case "$choice" in
-  "$shutdown")
-    run_cmd --shutdown
-    ;;
-  "$reboot")
-    run_cmd --reboot
-    ;;
-  "$lock")
-    run_cmd --lock
-    ;;
-  "$suspend")
-    run_cmd --suspend
-    ;;
-  "$logout")
-    run_cmd --logout
-    ;;
-  *)
-    echo "Invalid choice: $choice"
-    exit 1
-    ;;
-  esac
-  ;;
+	choice=$(show_powermenu "$DIR/powermenu.rasi")
+	case "$choice" in
+	"$shutdown")
+		run_cmd --shutdown
+		;;
+	"$reboot")
+		run_cmd --reboot
+		;;
+	"$lock")
+		run_cmd --lock
+		;;
+	"$suspend")
+		run_cmd --suspend
+		;;
+	"$logout")
+		run_cmd --logout
+		;;
+	*)
+		echo "Invalid choice: $choice"
+		exit 1
+		;;
+	esac
+	;;
 *)
-  echo "Usage: $0 {launcher|powermenu}"
-  exit 1
-  ;;
+	echo "Usage: $0 {launcher|powermenu}"
+	exit 1
+	;;
 esac
