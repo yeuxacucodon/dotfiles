@@ -15,18 +15,18 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 print_headings() {
-	echo -e "$BLUE==> $1$NC"
+  echo -e "$BLUE==> $1$NC"
 }
 
 # Run a command
 run_command() {
-	cmd=$1
-	if $DRY_RUN; then
-		echo -e "$YELLOW[DRY RUN] $cmd$NC"
-	else
-		echo -e "$GREEN[RUNNING] $cmd$NC"
-		eval $cmd
-	fi
+  cmd=$1
+  if $DRY_RUN; then
+    echo -e "${YELLOW}[DRY RUN] $cmd$NC"
+  else
+    echo -e "${GREEN}[RUNNING] $cmd$NC"
+    eval "$cmd"
+  fi
 }
 
 # Update system
