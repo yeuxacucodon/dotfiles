@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/Pictures/backgrounds/"
+DIR="$HOME/backgrounds/"
 
 if [ ! $(pgrep -x hyprpaper) ]; then
 	hyprpaper &
