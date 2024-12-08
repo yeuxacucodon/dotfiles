@@ -1,4 +1,13 @@
-idle = false
+idle = true
+fork = false
+frame = "full"
+vsync = true
+title-hidden = true
+mouse-cursor-icon = "arrow"
+theme = "auto"
+no-multigrid = false
+srgb = false
+tabs = true
 
 [font]
 normal = ["JetBrainsMono NF"]

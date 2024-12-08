@@ -17,9 +17,6 @@ alias lla="ls -la"           # Long listing including hidden files
 alias grep="rg --color=auto" # Use ripgrep for search with color output
 alias open="xdg-open"        # Open files with the default application
 
-# Add commonly used paths
-export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
-
 # Set default editor to Neovim
 export EDITOR="nvim"
 
