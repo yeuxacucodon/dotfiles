@@ -35,3 +35,5 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND" # Save history after each command
 
 # Checks the window size after each command and, if necessary, updates the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
