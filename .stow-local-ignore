@@ -1,5 +1,6 @@
 install.sh
 assets
+.prettierrc
 \.git
 \.gitignore
 \.gitmodules
