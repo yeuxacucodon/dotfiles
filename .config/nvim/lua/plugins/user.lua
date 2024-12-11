@@ -36,7 +36,7 @@ return {
   {
     "stevearc/overseer.nvim",
     opts = {
-      templates = { "builtin", "build_cpp", "build_c" },
+      templates = { "builtin", "build_cpp", "build_c", "run_bin" },
     },
   },
 
