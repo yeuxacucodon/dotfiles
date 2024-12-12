@@ -27,13 +27,6 @@ return {
   },
 
   {
-    "folke/which-key.nvim",
-    opts = {
-      preset = "helix",
-    },
-  },
-
-  {
     "stevearc/overseer.nvim",
     opts = {
       templates = { "builtin", "build_cpp", "build_c", "run_bin" },
@@ -48,5 +41,10 @@ return {
         "just",
       }
     end,
+  },
+
+  {
+    "ThePrimeagen/vim-be-good",
+    cmd = "VimBeGood",
   },
 }
