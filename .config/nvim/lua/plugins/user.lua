@@ -44,7 +44,49 @@ return {
   },
 
   {
-    "ThePrimeagen/vim-be-good",
-    cmd = "VimBeGood",
+    "saghen/blink.cmp",
+    opts = function(_, opts)
+      opts.keymap = { preset = "super-tab" }
+    end,
+  },
+
+  {
+    "catppuccin",
+    enabled = false,
+  },
+
+  {
+    "neo-tree.nvim",
+    enabled = false,
+  },
+
+  {
+    "noice.nvim",
+    enabled = false,
+  },
+
+  {
+    "nui.nvim",
+    enabled = false,
+  },
+
+  {
+    "plenary.nvim",
+    enabled = false,
+  },
+
+  {
+    "stevearc/oil.nvim",
+    cmd = "Oil",
+    keys = {
+      { "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
+    },
+    opts = {},
+    dependencies = { "echasnovski/mini.icons" },
+  },
+
+  {
+    "persistence.nvim",
+    enabled = false,
   },
 }
