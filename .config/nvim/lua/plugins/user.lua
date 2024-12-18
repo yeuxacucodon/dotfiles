@@ -56,26 +56,6 @@ return {
   },
 
   {
-    "neo-tree.nvim",
-    enabled = false,
-  },
-
-  {
-    "noice.nvim",
-    enabled = false,
-  },
-
-  {
-    "nui.nvim",
-    enabled = false,
-  },
-
-  {
-    "plenary.nvim",
-    enabled = false,
-  },
-
-  {
     "stevearc/oil.nvim",
     cmd = "Oil",
     keys = {
@@ -88,5 +68,14 @@ return {
   {
     "persistence.nvim",
     enabled = false,
+  },
+
+  {
+    "snacks.nvim",
+    opts = {
+      scroll = {
+        enabled = false,
+      },
+    },
   },
 }
