@@ -2,7 +2,9 @@ return {
   {
     "2giosangmitom/nightfall.nvim",
     dir = "~/Workspace/nightfall.nvim",
-    opts = {},
+    opts = {
+      transparent = true,
+    },
   },
 
   {
@@ -52,7 +54,9 @@ return {
 
   {
     "catppuccin",
-    enabled = false,
+    opts = {
+      transparent_background = true,
+    },
   },
 
   {
@@ -77,5 +81,15 @@ return {
         enabled = false,
       },
     },
+  },
+
+  {
+    "xeluxee/competitest.nvim",
+    dependencies = "MunifTanjim/nui.nvim",
+    cmd = "CompetiTest",
+    keys = {
+      { "<leader>ct", "<cmd>CompetiTest run<cr>", desc = "Test solution (CP)" },
+    },
+    opts = {},
   },
 }
