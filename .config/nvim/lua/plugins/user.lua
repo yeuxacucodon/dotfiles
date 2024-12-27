@@ -53,7 +53,8 @@ return {
   },
 
   {
-    "catppuccin",
+    "catppuccin/nvim",
+    name = "catppuccin",
     opts = {
       transparent_background = true,
     },
@@ -70,12 +71,12 @@ return {
   },
 
   {
-    "persistence.nvim",
+    "folke/persistence.nvim",
     enabled = false,
   },
 
   {
-    "snacks.nvim",
+    "folke/snacks.nvim",
     opts = {
       scroll = {
         enabled = false,
