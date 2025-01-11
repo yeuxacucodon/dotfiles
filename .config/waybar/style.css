@@ -1,7 +1,7 @@
 * {
   font-family: "JetBrainsMonoNF";
   border-radius: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   box-shadow: none;
   border: none;
@@ -11,29 +11,33 @@
 
 window#waybar {
   background: transparent;
-  color: #cdd6f4;
+  color: #edf7f6;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
 }
 
 tooltip {
-  background: rgba(30, 30, 46, 0.5);
-  border-radius: 1rem;
+  background: #141523;
+  border-radius: 5px;
   padding: 0 10px;
 }
 
 tooltip label {
-  color: #cdd6f4;
+  color: #edf7f6;
 }
 
 .module {
-  margin: 3px 0;
-  background: #1e1e2e;
-  border-radius: 2rem;
-  padding: 0 10px;
+  margin: 5px 5px;
+  background: #141523;
+  border-radius: 5px;
+  padding: 5px 8px;
 }
 
 #workspaces button {
   padding: 0 5px;
-  color: #cdd6f4;
+  color: #edf7f6;
 }
 
 #workspaces button:hover {
@@ -44,17 +48,17 @@ tooltip label {
 }
 
 #workspaces button.visible {
-  color: #cdd6f4;
+  color: #edf7f6;
 }
 
 #workspaces button.active {
-  color: #7287fd;
+  color: #8be9fd;
 }
 
 #workspaces button.urgent {
-  color: #e64553;
+  color: #ff5555;
 }
 
 #workspaces button.persistent {
-  color: #ea76cb;
+  color: #dd9ac2;
 }

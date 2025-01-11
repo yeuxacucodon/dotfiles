@@ -1,10 +1,1 @@
-install.sh
-assets
 .prettierrc
-\.git
-\.gitignore
-\.gitmodules
-^/README.*
-^/LICENSE.*
-.config/yazi/flavors/
-pkglist.txt
