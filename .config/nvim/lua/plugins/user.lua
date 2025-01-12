@@ -1,13 +1,5 @@
 return {
   {
-    "2giosangmitom/nightfall.nvim",
-    dir = "~/Workspace/nightfall.nvim",
-    opts = {
-      transparent = true,
-    },
-  },
-
-  {
     "williamboman/mason.nvim",
     opts = {
       ui = {
@@ -53,14 +45,6 @@ return {
   },
 
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    opts = {
-      transparent_background = true,
-    },
-  },
-
-  {
     "stevearc/oil.nvim",
     cmd = "Oil",
     keys = {
@@ -68,19 +52,5 @@ return {
     },
     opts = {},
     dependencies = { "echasnovski/mini.icons" },
-  },
-
-  {
-    "folke/persistence.nvim",
-    enabled = false,
-  },
-
-  {
-    "folke/snacks.nvim",
-    opts = {
-      scroll = {
-        enabled = false,
-      },
-    },
   },
 }
