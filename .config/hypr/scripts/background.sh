@@ -9,7 +9,7 @@ LAST_BG_FILE="/tmp/last_background"
 
 if [ -d "$DIR" ]; then
   while true; do
-    random_background=$(find "$DIR" -type f | shuf -n1)
+    random_background=$(fd -tf -a "^*" "$DIR" | shuf -n1)
     [[ ! -f "$LAST_BG_FILE" || "$random_background" != "$(cat "$LAST_BG_FILE")" ]] && break
   done
 

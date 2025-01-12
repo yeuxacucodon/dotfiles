@@ -1,5 +1,13 @@
 return {
   {
+    "2giosangmitom/nightfall.nvim",
+    dir = "~/Workspace/nightfall.nvim/",
+    opts = {
+      transparent = true,
+    },
+  },
+
+  {
     "williamboman/mason.nvim",
     opts = {
       ui = {
@@ -53,5 +61,10 @@ return {
     },
     opts = {},
     dependencies = { "echasnovski/mini.icons" },
+  },
+
+  {
+    "markdown-preview.nvim",
+    enabled = false,
   },
 }

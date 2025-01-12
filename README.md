@@ -1,10 +1,10 @@
 # Arch Linux Hyprland
 
-A customized setup for Arch Linux featuring [Hyprland](https://hyprland.org/), a dynamic tiling Wayland compositor. This setup includes a fully-configured development environment with Neovim, Rofi, Waybar, and more, designed to optimize productivity and aesthetics on a Wayland desktop.
+A customized setup for Arch Linux featuring [Hyprland](https://hyprland.org/), a dynamic tiling Wayland compositor. This setup includes a fully-configured development environment with Neovim, Waybar, and more, designed to optimize productivity and aesthetics on a Wayland desktop.
 
-## Screenshots
+## Preview
 
-![fastfetch](./assets/preview.png)
+![preview](./assets/preview.gif)
 
 ## Contributing
 
