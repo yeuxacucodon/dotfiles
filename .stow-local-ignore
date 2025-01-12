@@ -1,1 +1,9 @@
-.prettierrc
+install.sh
+assets/
+\.prettierrc
+\.git
+\.gitignore
+\.gitmodules
+^README.*
+^LICENSE.*
+pkglist.txt
