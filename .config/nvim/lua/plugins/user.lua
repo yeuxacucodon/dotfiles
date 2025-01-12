@@ -33,6 +33,7 @@ return {
       opts.ensure_installed = {
         "nix",
         "just",
+        "fish",
       }
     end,
   },
