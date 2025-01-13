@@ -14,6 +14,7 @@
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "pulseaudio",
+    "network",
     "battery",
     "group/system",
     "power-profiles-daemon",
