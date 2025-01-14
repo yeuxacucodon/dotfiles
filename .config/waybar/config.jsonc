@@ -6,7 +6,7 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 40,
+  "height": 0,
   "reload_style_on_change": false,
   "margin-right": 10,
   "margin-left": 10,
@@ -122,5 +122,9 @@
   "memory": {
     "format": "<span color='#f2fa95'></span> {used:0.1f}GiB/{total:0.1f}GiB",
     "tooltip-format": "RAM used: {percentage}%\nSwap used: {swapUsed}GiB\nTotal swap: {swapTotal}GiB"
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 15
   }
 }
