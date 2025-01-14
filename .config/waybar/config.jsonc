@@ -10,11 +10,12 @@
   "reload_style_on_change": false,
   "margin-right": 10,
   "margin-left": 10,
-  "modules-left": ["clock", "hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": ["clock", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": [],
   "modules-right": [
     "pulseaudio",
     "network",
+    "backlight",
     "battery",
     "group/system",
     "power-profiles-daemon",
@@ -27,7 +28,7 @@
       "children-class": "not-power",
       "transition-left-to-right": false
     },
-    "modules": ["memory", "temperature", "cpu", "backlight", "disk"]
+    "modules": ["memory", "temperature", "cpu", "disk"]
   },
   "power-profiles-daemon": {
     "format": "<span color='#20e3b2'>{icon}</span>  {profile}",
