@@ -1,6 +1,12 @@
 # Disable fish greeting message
 set -g fish_greeting
 
+# Enable zoxide integration
+zoxide init fish | source
+
+# Enable fzf integration
+fzf --fish | source
+
 # Enable starship integration for fish
 starship init fish | source
 
