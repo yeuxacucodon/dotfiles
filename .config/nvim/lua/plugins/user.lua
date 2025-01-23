@@ -6,6 +6,13 @@ return {
   },
 
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      popup_border_style = "rounded",
+    },
+  },
+
+  {
     "williamboman/mason.nvim",
     opts = {
       ui = {
@@ -15,6 +22,17 @@ return {
           package_uninstalled = " ",
         },
       },
+    },
+  },
+
+  {
+    "Saghen/blink.cmp",
+    opts = {
+      completion = {
+        menu = { border = "rounded" },
+        documentation = { window = { border = "rounded" } },
+      },
+      signature = { window = { border = "rounded" } },
     },
   },
 
@@ -29,7 +47,7 @@ return {
   {
     "stevearc/overseer.nvim",
     opts = {
-      templates = { "builtin", "build_cpp", "build_c", "run_bin" },
+      templates = { "builtin", "build_cpp", "run_bin" },
     },
   },
 
@@ -64,5 +82,18 @@ return {
   {
     "markdown-preview.nvim",
     enabled = false,
+  },
+
+  {
+    "nvzone/showkeys",
+    cmd = "ShowkeysToggle",
+    opts = {},
+  },
+
+  {
+    "folke/snacks.nvim",
+    opts = {
+      scroll = { enabled = false },
+    },
   },
 }

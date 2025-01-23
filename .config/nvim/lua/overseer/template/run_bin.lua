@@ -21,6 +21,6 @@ return {
     }
   end,
   condition = {
-    filetype = { "cpp", "c" },
+    filetype = { "cpp" },
   },
 }

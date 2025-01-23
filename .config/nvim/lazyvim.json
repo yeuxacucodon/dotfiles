@@ -1,5 +1,6 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.coding.blink",
     "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.editor.fzf",
@@ -20,8 +21,7 @@
     "lazyvim.plugins.extras.linting.eslint",
     "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.ui.treesitter-context",
-    "lazyvim.plugins.extras.util.dot",
-    "lazyvim.plugins.extras.util.mini-hipatterns"
+    "lazyvim.plugins.extras.util.dot"
   ],
   "news": {
     "NEWS.md": "10960"

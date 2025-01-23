@@ -19,3 +19,4 @@ alias lla="ls -la"
 alias gs="git status"
 alias gc="git commit"
 set -x EDITOR nvim
+set -ga fish_user_paths $HOME/.local/bin/
