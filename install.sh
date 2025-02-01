@@ -45,7 +45,7 @@ PACKAGES=(
   ttf-jetbrains-mono-nerd ttf-roboto
 
   # Terminal utilities
-  fd zoxide yazi stow neovim vim lazygit btop fastfetch starship ueberzugpp
+  fd zoxide yazi stow neovim lazygit btop fastfetch starship ueberzugpp
 
   # Shell and Git
   fish git ripgrep fzf
