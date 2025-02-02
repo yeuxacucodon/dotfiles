@@ -1,5 +1,5 @@
 install.sh
-assets/
+assets
 \.prettierrc
 \.git
 \.gitignore
