@@ -6,6 +6,27 @@ return {
       servers = {
         lua_ls = {},
         clangd = {},
+        volar = {},
+        ts_ls = {
+          init_options = {
+            plugins = {
+              {
+                name = "@vue/typescript-plugin",
+                location = "/usr/lib/node_modules/@vue/typescript-plugin",
+                languages = { "javascript", "typescript", "vue" },
+              },
+            },
+          },
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "javascript.jsx",
+            "typescript",
+            "typescriptreact",
+            "typescript.tsx",
+            "vue",
+          },
+        },
       },
     },
     config = function(_, opts)
@@ -38,6 +59,53 @@ return {
         { path = "${3rd}/luv/library", words = { "vim%.uv" } },
         { path = "snacks.nvim", words = { "Snacks" } },
       },
+    },
+  },
+
+  {
+    "saghen/blink.cmp",
+    version = "*",
+    event = { "InsertEnter", "CmdLineEnter" },
+    opts = {
+      keymap = { preset = "super-tab" },
+      appearance = {
+        use_nvim_cmp_as_default = false,
+        nerd_font_variant = "mono",
+      },
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+      },
+      completion = {
+        accept = {
+          auto_brackets = {
+            enabled = true,
+          },
+        },
+        menu = {
+          draw = {
+            treesitter = { "lsp" },
+            components = {
+              kind_icon = {
+                ellipsis = false,
+                text = function(ctx)
+                  local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
+                  return kind_icon
+                end,
+              },
+            },
+          },
+          border = "rounded",
+        },
+        documentation = {
+          auto_show = true,
+          auto_show_delay_ms = 200,
+          window = { border = "rounded" },
+        },
+        ghost_text = {
+          enabled = true,
+        },
+      },
+      signature = { enabled = true, window = { border = "rounded" } },
     },
   },
 }

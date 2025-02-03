@@ -3,7 +3,7 @@ return {
     "2giosangmitom/nightfall.nvim",
     dir = "~/Workspace/nightfall.nvim",
     opts = {
-      transparent = true,
+      transparent = false,
     },
   },
 
@@ -110,5 +110,11 @@ return {
         },
       },
     },
+  },
+
+  {
+    "j-hui/fidget.nvim",
+    event = "LspAttach",
+    opts = {},
   },
 }

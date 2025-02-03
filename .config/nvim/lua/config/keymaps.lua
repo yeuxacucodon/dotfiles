@@ -8,3 +8,6 @@ map("n", "<leader>l", ":Lazy<cr>", { desc = "lazy.nvim", silent = true })
 
 -- Save
 map({ "n", "i" }, "<c-s>", "<esc>:w<cr>", { desc = "Save", silent = true })
+
+-- Clear search highlights
+map("n", "<esc>", ":nohlsearch<cr>", { desc = "Clear search highlights" })
